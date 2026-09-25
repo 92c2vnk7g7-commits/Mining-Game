@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mining Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Deep Core Ventures</p>
+          <h1>Mining Game</h1>
+        </div>
+        <button id="resetBtn" class="secondary">Reset Run</button>
+      </header>
+
+      <main class="layout">
+        <aside class="panel stats-panel">
+          <h2>Prospector Status</h2>
+
+          <div class="stat-grid">
+            <div class="stat-card accent">
+              <span>Gold</span>
+              <strong id="goldValue">0</strong>
+            </div>
+            <div class="stat-card">
+              <span>Energy</span>
+              <strong id="energyValue">100 / 100</strong>
+            </div>
+            <div class="stat-card">
+              <span>Drill Level</span>
+              <strong id="drillLevelValue">1</strong>
+            </div>
+            <div class="stat-card">
+              <span>Cart Level</span>
+              <strong id="cartLevelValue">1</strong>
+            </div>
+            <div class="stat-card">
+              <span>Auto-Miner</span>
+              <strong id="autoMinerValue">0</strong>
+            </div>
+          </div>
+
+          <div class="controls">
+            <button id="mineBtn" class="primary">Mine Ore</button>
+            <button id="restBtn" class="secondary">Rest</button>
+            <button id="sellBtn" class="secondary">Sell Cargo</button>
+          </div>
+        </aside>
+
+        <section class="panel game-panel">
+          <div class="panel-header">
+            <h2>Mining Zone</h2>
+            <span id="zoneName">Surface Ridge</span>
+          </div>
+
+          <div class="ore-grid" id="oreGrid" aria-live="polite">
+            <div class="ore-card coal">Coal <span id="coalValue">0</span></div>
+            <div class="ore-card iron">Iron <span id="ironValue">0</span></div>
+            <div class="ore-card gold">Gold <span id="goldOreValue">0</span></div>
+            <div class="ore-card diamond">Diamond <span id="diamondValue">0</span></div>
+          </div>
+
+          <div class="upgrades">
+            <h3>Upgrades</h3>
+            <div class="upgrade-row">
+              <div>
+                <span>Upgrade Drill</span>
+                <small id="drillCost">Cost: 30</small>
+              </div>
+              <button id="upgradeDrillBtn">Buy</button>
+            </div>
+            <div class="upgrade-row">
+              <div>
+                <span>Upgrade Cart</span>
+                <small id="cartCost">Cost: 60</small>
+              </div>
+              <button id="upgradeCartBtn">Buy</button>
+            </div>
+            <div class="upgrade-row">
+              <div>
+                <span>Auto-Miner</span>
+                <small id="autoMinerCost">Cost: 120</small>
+              </div>
+              <button id="upgradeAutoBtn">Buy</button>
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel log-panel">
+          <h2>Operation Log</h2>
+          <ul id="logList" class="log-list"></ul>
+        </aside>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
